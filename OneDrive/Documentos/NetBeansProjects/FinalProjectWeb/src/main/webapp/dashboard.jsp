@@ -116,7 +116,7 @@
             </c:when>
             <c:otherwise>
                 <!-- Botón deshabilitado para no administradores -->
-                <button class="btn btn-primary" disabled> Deshabilitado por permisos de admin</button>
+                <button class="btn btn-primary" disabled> Deshabilitado por permisos de administrador</button>
             </c:otherwise>
         </c:choose>
 
