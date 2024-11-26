@@ -205,7 +205,7 @@
             modalMessage.textContent = "Conexión exitosa y consultas ejecutadas correctamente.";
             modal.style.display = 'block'; // Mostrar el modal
         } else if (connectionStatus === 'error') {
-            modalMessage.textContent = "Ocurrió un error al procesar la solicitud. Por favor, verifica la conexión y las consultas.";
+            modalMessage.textContent = "Ocurrió un error al procesar la solicitud, verifica la conexión a la base de datos.";
             modal.style.display = 'block'; // Mostrar el modal
         }
 

@@ -28,14 +28,18 @@ public class DashboardServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        // Recuperar el atributo de la sesión
+        Boolean canViewConsultations = (Boolean) request.getSession().getAttribute("canViewConsultations");
+        if (canViewConsultations == null) {
+            canViewConsultations = false; // Por defecto, no es administrador
+        }
+
         // Recupera los libros desde la base de datos
         List<Books> books = booksController.findBooksEntities();
-
         // Pasa los libros al JSP
         request.setAttribute("books", books);
-        
-        
-        
+        request.setAttribute("canViewConsultations", canViewConsultations);
         for (Books book : books) {
             System.out.println("Libro: "+book.getTitle());
         }

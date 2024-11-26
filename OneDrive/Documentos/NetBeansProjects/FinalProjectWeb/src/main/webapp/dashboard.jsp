@@ -109,9 +109,17 @@
             </tbody>
         </table> 
   
-        <div class="container text-center">
-        <a href="ConsultasServlet" class="btn btn-primary">Ver Consultas</a> 
-        </div>
+        <c:choose>
+            <c:when test="${canViewConsultations}">
+                <!-- Botón habilitado para administradores -->
+                <a href="ConsultasServlet" class="btn btn-primary">Ver Consultas</a>
+            </c:when>
+            <c:otherwise>
+                <!-- Botón deshabilitado para no administradores -->
+                <button class="btn btn-primary" disabled> Deshabilitado por permisos de admin</button>
+            </c:otherwise>
+        </c:choose>
+
     </section> 
     
 </body>

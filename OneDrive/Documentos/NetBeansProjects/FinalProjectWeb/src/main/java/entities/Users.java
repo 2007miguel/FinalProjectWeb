@@ -41,6 +41,10 @@ public class Users implements Serializable {
     @Size(min = 1, max = 255)
     @Column(name = "password")
     private String password;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "is_admin")
+    private boolean isAdmin;
 
     public Users() {
     }
@@ -49,9 +53,10 @@ public class Users implements Serializable {
         this.username = username;
     }
 
-    public Users(String username, String password) {
+    public Users(String username, String password, Boolean isAdmin) {
         this.username = username;
-        this.password = password;
+        this.password = password; 
+        this.isAdmin = isAdmin;
     }
 
     public String getUsername() {
@@ -68,6 +73,14 @@ public class Users implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
+    } 
+    
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean isAdmin) {
+        this.isAdmin = isAdmin;
     }
 
     @Override
