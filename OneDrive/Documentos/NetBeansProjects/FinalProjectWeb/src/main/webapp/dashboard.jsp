@@ -40,7 +40,7 @@
 
         .scrollable-tbody {
             display: block;
-            max-height: 150px; /* Define la altura del área desplazable */
+            max-height: 500px; /* Define la altura del área desplazable */
             overflow-y: auto;
             width: 100%;
         }
@@ -60,7 +60,6 @@
 </head>
 <body>
     <header>
-        <h1>Lista de Libros</h1>
         <form method="POST" action="LogoutServlet">
             <button class="btn btn-danger" type="submit">Cerrar Sesión</button>
         </form>
@@ -108,13 +107,13 @@
                     </tr>
                 </c:forEach>
             </tbody>
-        </table>
+        </table> 
+  
         <div class="container text-center">
-        <a id="btnConsulta1" class="btn btn-primary mr-2">Autores y Editoriales</a>
-        <a id="btnConsulta2" class="btn btn-primary">Libros prestados y Prestatarios</a>
-        <a id="btnConsulta3" class="btn btn-primary">Libros, Editoriales y Autores</a>
-    </div>
-    </section>
+        <a href="ConsultasServlet" class="btn btn-primary">Ver Consultas</a> 
+        </div>
+    </section> 
+    
 </body>
 </html>
 
