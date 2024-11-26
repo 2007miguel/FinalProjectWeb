@@ -202,7 +202,7 @@
         const modalMessage = document.getElementById('modal-message');
 
         if (connectionStatus === 'success') {
-            modalMessage.textContent = "Consultas ejecutadas correctamente.";
+            modalMessage.textContent = "Consultas ejecutadas con exito.";
             modal.style.display = 'block'; // Mostrar el modal
         } else if (connectionStatus === 'error') {
             modalMessage.textContent = "Ocurrió un error al procesar la solicitud, verifica la conexión a la base de datos.";
